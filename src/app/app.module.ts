@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { JoinComponent } from './join/join.component';
 import { GameComponent } from './game/game.component';
 import { FinaleComponent } from './finale/finale.component';
+import { AppRouterModule } from './/app-router.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FinaleComponent } from './finale/finale.component';
     FinaleComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
