@@ -7,6 +7,7 @@ import { JoinComponent } from './join/join.component';
 import { GameComponent } from './game/game.component';
 import { FinaleComponent } from './finale/finale.component';
 import { AppRouterModule } from './/app-router.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AppRouterModule } from './/app-router.module';
   ],
   imports: [
     BrowserModule,
-    AppRouterModule
+    AppRouterModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
