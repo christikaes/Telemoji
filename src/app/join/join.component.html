@@ -1,3 +1,18 @@
-<p>
-  join works! GameId: {{gameId}}
-</p>
+<h1 class="mat-h1">Join Game</h1>
+
+<mat-form-field>
+  <input matInput placeholder="Game ID" [(ngModel)]="gameId">
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput placeholder="Name" [(ngModel)]="name">
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput placeholder="Emoji" [(ngModel)]="emoji">
+</mat-form-field>
+
+<div class="cta">
+  <button mat-raised-button [disabled]="!gameId">Watch</button>
+  <button mat-raised-button [disabled]="!gameId || !name || !emoji" color="primary">Join</button>
+</div>

@@ -8,6 +8,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class JoinComponent implements OnInit {
   public gameId;
+  public name;
+  public emoji;
+  public spectator;
 
   constructor(private route: ActivatedRoute) { }
 

@@ -1,0 +1,16 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+}
+
+.cta {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cta button {
+    width: 40%;
+}
