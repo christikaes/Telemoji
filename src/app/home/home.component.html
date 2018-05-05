@@ -1,3 +1,31 @@
-<p>
-  home works!
-</p>
+<div class="header">
+    <img src="/assets/logo.svg" height="200px">
+    <h1 class="mat-h1">Telem😂ji</h1>
+    <h2 class="mat-h2">A fun game for family and friends</h2>
+</div>
+
+<button class="cta" mat-raised-button>New Game</button>
+<button class="cta" mat-raised-button>Join Game</button>
+
+<mat-expansion-panel class="help">
+    <mat-expansion-panel-header>
+        How to play
+    </mat-expansion-panel-header>
+    <mat-vertical-stepper>
+        <mat-step label="Start a game" [completed]="false">
+            Create a new game, or join one that someone created. Recommended for 4-6 players
+        </mat-step>
+        <mat-step label="Enter a phrase" [completed]="false">
+            Each player will start with a phrase that will get 'telephoned' around. Eg: 'Golden retriever'
+        </mat-step>
+        <mat-step label="Translate to emoji" [completed]="false">
+            The next player will translate the phrase to emoji
+        </mat-step>
+        <mat-step label="Translate back to text" [completed]="false">
+            The next player will translate back to english
+        </mat-step>
+        <mat-step label="See the results!" [completed]="false">
+            Keep going round robin until all the messages have been translated!
+        </mat-step>
+    </mat-vertical-stepper>
+</mat-expansion-panel>

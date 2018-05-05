@@ -1,0 +1,26 @@
+@import '~@angular/material/theming';
+@import '../../styles.scss';
+
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.header {
+    margin: 20px 0;
+}
+
+.cta {
+    margin: 10px auto;
+    width: 300px; 
+}
+
+.help {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: left;
+}
