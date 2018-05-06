@@ -1,3 +1,12 @@
-<p>
-  finale works! GameId: {{gameId}}
-</p>
+<mat-tab-group>
+  <mat-tab *ngFor="let messageChain of messageChains">
+    <ng-template mat-tab-label>
+      {{messageChain[0].emoji}}
+    </ng-template>
+    <div class="container">
+      <app-game-message *ngFor="let message of messageChain" [avatar]="message.emoji" [message]="message.message" [direction]="message.step % 2 !== 0 ? 'to' : 'from'"></app-game-message>
+    </div>
+  </mat-tab>
+</mat-tab-group>
+
+<button mat-raised-button color="primary" class="cta">Play Again!</button>
