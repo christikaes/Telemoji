@@ -1,0 +1,16 @@
+<div class="mat-body-1">
+  <div class="mat-title">Invite your friends!</div>
+  <div>Game ID: {{gameId}}</div>
+  <img class="qr" src="http://api.qrserver.com/v1/create-qr-code/?size=150x150&bgcolor=ffd600&color=303030&qzone=1&data={{joinUrl}}"
+    height="150px">
+  <div>{{joinUrl}}</div>
+</div>
+<div class="divider"></div>
+<div class="players mat-body-1">
+  <div *ngFor="let player of players" class="player">
+    <div class="emoji">{{player.emoji}}</div>
+    <div class="name">{{player.name}}</div>
+  </div>
+</div>
+
+<button mat-raised-button color="primary">Start Game!</button>

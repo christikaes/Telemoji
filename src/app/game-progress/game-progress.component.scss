@@ -1,0 +1,44 @@
+@import '../../styles.scss';
+
+:host {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.players {
+    height: 50px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player {
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    position: relative;
+
+    .emoji {
+        position: absolute;
+        font-size: 20px;
+        margin: 10px;
+    }
+    .progress {
+        position: absolute;
+        height: 50px;
+    }
+}
+
+.messages {
+    margin: 30px;
+}
+
+.text-box {
+    width: 90%;
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+}

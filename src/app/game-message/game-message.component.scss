@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+}
+
+.avatar {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.message {
+    max-width: 200px;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 20px 5px 0px 5px;
+}
+                
+.from {   
+    .message {
+        background: #424242;
+        border-top-left-radius: 0;
+        color: white;
+        text-align: left;
+    }
+}
+
+.to { 
+    &.container {
+        justify-content: flex-end;
+    }
+    .message {
+        order: -1;
+        background: white;
+        color: #424242;
+        border-top-right-radius: 0;
+        text-align: right;
+    }
+}

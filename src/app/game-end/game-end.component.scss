@@ -1,0 +1,14 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 200px;
+    justify-content: space-around
+}
+
+.cta {
+    position: absolute;
+    bottom: 30px;
+    width: 90%;
+    left: 5%;
+}

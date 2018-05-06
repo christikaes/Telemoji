@@ -1,0 +1,40 @@
+@import '../../styles.scss';
+
+:host {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.qr {
+    margin: 10px;
+}
+
+.divider {
+    height: 1px;
+    margin: 10px;
+    background-color: mat-color($primary)
+}
+
+.players {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.player {
+    width: 30%;
+    padding: 1%;
+    
+    .emoji {
+        font-size: 40px;
+    }
+    
+    .name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

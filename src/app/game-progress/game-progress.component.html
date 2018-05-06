@@ -1,0 +1,31 @@
+<div class="players">
+  <div *ngFor="let player of playersProgress" class="player">
+    <mat-progress-spinner [value]="player.progress" class="progress" diameter="50"></mat-progress-spinner>
+    <div class="emoji">{{player.emoji}}</div>
+  </div>
+</div>
+
+<div *ngIf="playerId">
+  <mat-progress-bar mode="determinate" [value]="timeLeft"></mat-progress-bar>
+  <div class="messages" *ngIf="currentStep !== 0">
+    <app-game-message [avatar]="previousMessage.emoji" [message]="previousMessage.message" [direction]="currentStep % 2 === 0 ? 'to' : 'from'"></app-game-message>
+  </div>
+
+  <!-- Text keyboard -->
+  <mat-form-field class="text-box" color="secondary" *ngIf="currentStep % 2 === 0">
+    <input matInput placeholder="{{currentStep === 0? 'Enter a starting phrase:' : 'Textify it!'}}" (ngModel)="text">
+    <mat-icon matSuffix>send</mat-icon>
+  </mat-form-field>
+
+  <!-- Emoji keyboard -->
+  <mat-form-field class="text-box" color="secondary" *ngIf="currentStep % 2 !== 0">
+    <input matInput placeholder="{{currentStep === 0? 'Enter a starting phrase:' : 'Emojilate it!'}}" (ngModel)="text">
+    <mat-icon matSuffix>send</mat-icon>
+  </mat-form-field>
+</div>
+
+<div *ngIf="!playerId">
+  <mat-spinner [mode]="indeterminate">
+  </mat-spinner>
+  Waiting...
+</div>

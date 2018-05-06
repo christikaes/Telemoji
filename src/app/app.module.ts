@@ -10,6 +10,10 @@ import { FinaleComponent } from './finale/finale.component';
 import { AppRouterModule } from './/app-router.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './/app-material.module';
+import { GameStartComponent } from './game-start/game-start.component';
+import { GameProgressComponent } from './game-progress/game-progress.component';
+import { GameEndComponent } from './game-end/game-end.component';
+import { GameMessageComponent } from './game-message/game-message.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { AppMaterialModule } from './/app-material.module';
     HomeComponent,
     JoinComponent,
     GameComponent,
-    FinaleComponent
+    FinaleComponent,
+    GameStartComponent,
+    GameProgressComponent,
+    GameEndComponent,
+    GameMessageComponent
   ],
   imports: [
     BrowserModule,
