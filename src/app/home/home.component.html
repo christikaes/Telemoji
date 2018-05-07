@@ -4,8 +4,8 @@
     <h2 class="mat-h2">A fun game for family and friends</h2>
 </div>
 
-<button class="cta" mat-raised-button>New Game</button>
-<button class="cta" mat-raised-button>Join Game</button>
+<button class="cta" mat-raised-button (click)="newGame()">New Game</button>
+<button class="cta" mat-raised-button [routerLink]="'/join'">Join Game</button>
 
 <mat-expansion-panel class="help">
     <mat-expansion-panel-header>

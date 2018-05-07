@@ -13,6 +13,6 @@
 </mat-form-field>
 
 <div class="cta">
-  <button mat-raised-button [disabled]="!gameId">Watch</button>
-  <button mat-raised-button [disabled]="!gameId || !name || !emoji" color="primary">Join</button>
+  <button mat-raised-button [disabled]="!gameId" [routerLink]="'/game/' + gameId">Watch</button>
+  <button mat-raised-button [disabled]="!gameId || !name || !emoji" color="primary" (click)="join()">Join</button>
 </div>
