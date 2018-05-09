@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { select } from '@angular-redux/store';
 
 @Component({
   selector: 'app-game',
@@ -10,33 +11,11 @@ export class GameComponent implements OnInit {
   public gameId;
   public playerId;
   public joinUrl;
-  // TODO:
-  public players = [
-    {
-      playerId: '1', name: 'foooooooooo', emoji: '🦄', messages: [
-        'Golden Retriever',
-        // '🏖🎊💃',
-        // 'Tiger'
-      ]
-    },
-    {
-      playerId: '2', name: 'foo', emoji: '💩', messages: [
-        'Nyan Cat',
-        // '💛🐶',
-        // 'Going to the beach'
-      ]
-    },
-    {
-      playerId: '3', name: 'foo', emoji: '🍌', messages: [
-        'Beach party',
-        '🌈🐱',
-        // 'Good Boi',
-      ]
-    },
-  ];
-  public timeLeft = 20;
-  public state: 'start' | 'progress' | 'end' = 'progress';
-  public currentStep = 1;
+
+  @select() players$;
+  @select() timeLeft$;
+  @select() state$;
+  @select() currentStep$;
 
   constructor(private route: ActivatedRoute) { }
 

@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+import { NgReduxModule, NgRedux, DevToolsExtension } from '@angular-redux/store';
+import { IAppState, rootReducer, INITIAL_STATE } from './store';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { JoinComponent } from './join/join.component';
@@ -32,9 +35,14 @@ import { GameMessageComponent } from './game-message/game-message.component';
     FormsModule,
     AppRouterModule,
     BrowserAnimationsModule,
-    AppMaterialModule
+    AppMaterialModule,
+    NgReduxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private ngRedux: NgRedux<IAppState>, private devTools: DevToolsExtension) {
+    ngRedux.configureStore(rootReducer, INITIAL_STATE, [], [devTools.enhancer()]);
+  }
+}

@@ -1,11 +1,12 @@
-<span [ngSwitch]="state">
+<span [ngSwitch]="state$ | async">
   <div *ngSwitchCase="'progress'">
-    <app-game-progress [players]="players" [gameId]="gameId" [playerId]="playerId" [currentStep]="currentStep" [timeLeft]="timeLeft"></app-game-progress>
+    <app-game-progress [players]="players$ | async" [gameId]="gameId" [playerId]="playerId" [currentStep]="currentStep$ | async"
+      [timeLeft]="timeLeft$ | async"></app-game-progress>
   </div>
   <div *ngSwitchCase="'end'">
     <app-game-end></app-game-end>
   </div>
   <div *ngSwitchDefault>
-    <app-game-start [players]="players" [gameId]="gameId" [playerId]="playerId" [joinUrl]="joinUrl"></app-game-start>
+    <app-game-start [players]="players$ | async" [gameId]="gameId" [playerId]="playerId" [joinUrl]="joinUrl"></app-game-start>
   </div>
 </span>
